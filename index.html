@@ -430,7 +430,7 @@ button.seller{width:100%;text-align:right}
 .logo b,.nav-brand b{white-space:nowrap}
 @media (max-width:359px){.home-head .loc-chip{display:none}}
 .lang{min-height:42px;min-width:44px;padding:.35rem .85rem;border-radius:999px;font-size:.8125rem;font-weight:700;color:var(--on-dark);border:1px solid rgba(240,214,168,.35);background:rgba(40,24,12,.35)}
-.lang.on-splash{position:absolute;top:.9rem;left:1rem;z-index:2}
+.lang.on-splash{position:fixed;top:calc(.9rem + env(safe-area-inset-top,0px));inset-inline-start:1rem;z-index:30}
 .head-tools{display:inline-flex;align-items:center}
 .head-tools .lang{margin-left:.5rem}
 @media (hover:hover){
@@ -1126,7 +1126,7 @@ button.seller{width:100%;text-align:left}
 .logo b,.nav-brand b{white-space:nowrap}
 @media (max-width:359px){.home-head .loc-chip{display:none}}
 .lang{min-height:42px;min-width:44px;padding:.35rem .85rem;border-radius:999px;font-size:.8125rem;font-weight:700;color:var(--on-dark);border:1px solid rgba(240,214,168,.35);background:rgba(40,24,12,.35)}
-.lang.on-splash{position:absolute;top:.9rem;right:1rem;z-index:2}
+.lang.on-splash{position:fixed;top:calc(.9rem + env(safe-area-inset-top,0px));inset-inline-start:1rem;z-index:30}
 .head-tools{display:inline-flex;align-items:center}
 .head-tools .lang{margin-right:.5rem}
 /* نص المستخدم: كسر الكلمات الطويلة، وحفظ الأسطر، واتجاه تلقائي */
