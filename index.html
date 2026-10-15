@@ -695,7 +695,6 @@ body{background:#f4f6f7;color:var(--on-dark)}
   .chip:hover{color:#315944;border-color:#9bb6a4;background:#f4f8f5}
   .nav button:hover{color:#315944;background:rgba(63,112,91,.07)}
 }
-@media (prefers-reduced-motion:reduce){.card,.cat,.btn,.nav button{transition:none}}
 </style>
 <style id="css-ltr" media="not all">
 :root{
@@ -1336,13 +1335,14 @@ html[lang="ar"] .detail-cols .block p,html[lang="en"] .detail-cols .block p{colo
 html[lang="ar"] .detail-cols .specs dt,html[lang="en"] .detail-cols .specs dt,html[lang="ar"] .detail-cols .seller small,html[lang="en"] .detail-cols .seller small,html[lang="ar"] .detail-cols .facts,html[lang="en"] .detail-cols .facts{color:#58655e}
 html[lang="ar"] .detail-cols .seller>.ic,html[lang="en"] .detail-cols .seller>.ic{color:#53675b}
 @media (max-width:899px){
-  .splash .hscroll{padding-inline:max(0px,calc((100% - 21.75rem)/2));gap:.75rem;scroll-snap-type:none;scroll-padding-inline:0}
+  .splash .hscroll{padding-inline:1rem;gap:.75rem;scroll-snap-type:none;scroll-padding-inline:0}
+  .splash .hscroll .card{flex:0 0 calc((100% - .75rem)/2);min-width:0}
   .splash .hscroll .card.card + .card{margin-inline:0}
   .splash .hscroll::after{display:none}
 }
 @media (max-width:767px){
-  html[dir="rtl"] .splash .hscroll{clip-path:inset(0 0 0 2rem)}
-  html[dir="ltr"] .splash .hscroll{clip-path:inset(0 2rem 0 0)}
+  html[dir="rtl"] .splash .hscroll{clip-path:inset(0 0 0 1rem)}
+  html[dir="ltr"] .splash .hscroll{clip-path:inset(0 1rem 0 0)}
 }
 .foot-detail,.foot-thread-wrap{background:rgba(255,255,255,.97);border-top:1px solid #e5e9e7}
 .gallery .bar .round-btn{color:#2d3932;background:rgba(255,255,255,.94);border-color:#e1e6e3}
@@ -1375,8 +1375,48 @@ html[lang="ar"] .has-pat .splash,html[lang="en"] .has-pat .splash{background:#ec
   .splash .splash-cats button:hover{transform:translateY(-1px);box-shadow:0 5px 12px rgba(25,40,32,.08);border-color:#cedbd3}
   .chip:hover{color:#315944;border-color:#9bb6a4;background:#f4f8f5}
   .nav button:hover{color:#315944;background:rgba(63,112,91,.07)}
+  .mode-toggle:hover{background:#f2f6f3;border-color:#c9d8cf}
 }
 @media (prefers-reduced-motion:reduce){.card,.cat,.btn,.nav button{transition:none}}
+html[data-theme="dark"]{color-scheme:dark;--ink:#171c19;--bark:#202723;--umber:#394740;--clay:#a6b2aa;--gold:#83b59a;--gold-deep:#a0cbb2;--sand:#303a34;--cream:#222a26;--on-dark:#e6ece8;--on-dark-muted:#a5b0a9;--on-light:#e4ebe6;--on-light-muted:#a7b2ab;--line-dark:rgba(220,235,225,.16);--line-light:rgba(220,235,225,.14)}
+html[data-theme="dark"],html[data-theme="dark"] body{background:#171c19;color:#e4ebe6}
+html[data-theme="dark"] .app-bg{background:#171c19;background-image:linear-gradient(180deg,#1d2420,#151a17)}
+html[data-theme="dark"] .topbar,html[data-theme="dark"] .home-head{background:rgba(29,36,32,.96);border-color:#343e38}
+html[data-theme="dark"] .sec-head h2,html[data-theme="dark"] .home-head .loc-chip,html[data-theme="dark"] .count,html[data-theme="dark"] .meta,html[data-theme="dark"] .facts,html[data-theme="dark"] .seller small,html[data-theme="dark"] .specs dt{color:#aab5ae}
+html[data-theme="dark"] .btn-ghost,html[data-theme="dark"] .btn-light,html[data-theme="dark"] .round-btn,html[data-theme="dark"] .search,html[data-theme="dark"] .cat,html[data-theme="dark"] .card,html[data-theme="dark"] .pill,html[data-theme="dark"] .chip,html[data-theme="dark"] .empty,html[data-theme="dark"] .block,html[data-theme="dark"] .form,html[data-theme="dark"] .rowlist,html[data-theme="dark"] .about-ad,html[data-theme="dark"] .stats div,html[data-theme="dark"] .me,html[data-theme="dark"] .composer input{color:#e4ebe6;background:#252d28;background-image:none;border-color:#3a4640;box-shadow:0 3px 12px rgba(0,0,0,.18)}
+html[data-theme="dark"] .card h3,html[data-theme="dark"] .block h2,html[data-theme="dark"] .sheet h1,html[data-theme="dark"] .empty b,html[data-theme="dark"] .me b{color:#e4ebe6}
+html[data-theme="dark"] .photo{background:#303a34;background-image:linear-gradient(135deg,#303a34,#28312c)}
+html[data-theme="dark"] .photo .art span{color:#e4ebe6;background:rgba(37,45,40,.85)}
+html[data-theme="dark"] .fav{color:#dce6df;background:#303a34}
+html[data-theme="dark"] .badge{color:#d5eddf;background:#315541}
+html[data-theme="dark"] .nav,html[data-theme="dark"] .app[data-s="add"] .nav,html[data-theme="dark"] .app[data-s="detail"] .nav,html[data-theme="dark"] .app[data-s="thread"] .nav,html[data-theme="dark"] .app[data-s="login"] .nav{color:#dce5de;background:rgba(30,37,33,.98);border-color:#39443e}
+html[data-theme="dark"] .nav button{color:#aab5ae}
+html[data-theme="dark"] .nav button[aria-current="page"]{color:#b1ddc3;background:rgba(104,161,125,.15)}
+html[data-theme="dark"] .nav .orb,html[data-theme="dark"] .btn-gold,html[data-theme="dark"] .composer button,html[data-theme="dark"] .chip[aria-pressed="true"]{color:#102018;background:#8cbea0;border-color:#8cbea0}
+html[data-theme="dark"] .hero-cta{color:#17251c;background:#e6ede8}
+html[data-theme="dark"] .filters{background:linear-gradient(180deg,rgba(23,28,25,.98),rgba(23,28,25,.9) 75%,rgba(23,28,25,0))}
+html[data-theme="dark"] .pill select,html[data-theme="dark"] .field input,html[data-theme="dark"] .field textarea,html[data-theme="dark"] .field select{color:#e4ebe6;background:#1d2420;border-color:#46524b}
+html[data-theme="dark"] .rowlist>button{border-color:#343f38}
+html[data-theme="dark"] .rowlist>button:hover{background:#303a34}
+html[data-theme="dark"] .msg.them{color:#e4ebe6;background:#303a34}
+html[data-theme="dark"] .msg.me{color:#fff;background:#3f705b}
+html[data-theme="dark"] .foot-detail,html[data-theme="dark"] .foot-thread-wrap{background:rgba(29,36,32,.98);border-color:#39443e}
+html[data-theme="dark"] .gallery .bar .round-btn{color:#e4ebe6;background:rgba(37,45,40,.95);border-color:#46524b}
+html[data-theme="dark"] .toast{color:#e4ebe6;background:#252d28;border-color:#3a4640}
+html[data-theme="dark"] .splash{color:#e4ebe6;background:#171c19;background-image:linear-gradient(180deg,#202823,#171c19)}
+html[data-theme="dark"] .sp-main,html[data-theme="dark"] .sp-main h1{color:#b1ddc3;-webkit-text-fill-color:#b1ddc3}
+html[data-theme="dark"] .sp-main .tag{color:#c2ccc5}
+html[data-theme="dark"] .sp-main .tag,html[data-theme="dark"] .sp-note,html[data-theme="dark"] .splash-foot,html[data-theme="dark"] .sp-stats{color:#a5b0a9}
+html[data-theme="dark"] .splash-cats button,html[data-theme="dark"] .perks,html[data-theme="dark"] .splash .splash-cats button{color:#e4ebe6;background:#252d28;border-color:#3a4640}
+html[data-theme="dark"] .lang,html[data-theme="dark"] .mode-toggle{color:#dce6df;background:#252d28;border-color:#3a4640}
+html[data-theme="dark"] .sp-login,html[data-theme="dark"] .sec-head button{color:#a0cbb2}
+html[data-theme="dark"] .detail-cols .block{color:#e4ebe6;background:#252d28;background-image:none;border-color:#3a4640}
+html[data-theme="dark"] .detail-cols .block h2,html[data-theme="dark"] .detail-cols .block p,html[data-theme="dark"] .detail-cols .facts,html[data-theme="dark"] .detail-cols .specs dt,html[data-theme="dark"] .detail-cols .seller small{color:#c2ccc5}
+html[data-theme="dark"] .sp-cta .btn-gold{color:#07130b;-webkit-text-fill-color:#07130b;background:#80bd98;border-color:#80bd98;font-weight:800}
+.mode-toggle{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;border:1px solid #dfe5e1;border-radius:50%;color:#405047;background:#fff;box-shadow:0 2px 8px rgba(24,39,31,.06)}
+.mode-toggle .ic{width:1.2rem;height:1.2rem}
+.mode-toggle.on-splash{position:fixed;top:calc(.9rem + env(safe-area-inset-top,0px));inset-inline-end:1rem;z-index:30}
+:root{color-scheme:light}
 </style>
 </head>
 <body>
@@ -2233,6 +2273,10 @@ function applyLang(){ const en=LANG==='en', d=document.documentElement; d.lang=e
   const a=$('#css-rtl'), b=$('#css-ltr'); if(a&&b){ a.media=en?'not all':'all'; b.media=en?'all':'not all'; }
   document.title=en?'Haraj AlUla':'حراج العلا'; nav.setAttribute('aria-label',en?'Main navigation':'التنقل الرئيسي'); }
 function setLang(l){ LANG=l==='en'?'en':'ar'; try{localStorage.setItem('haraj-alula-lang',LANG);}catch(e){} applyLang(); render(); }
+let THEME='light'; try{ if(localStorage.getItem('haraj-alula-theme')==='dark') THEME='dark'; }catch(e){}
+function applyTheme(){ const d=document.documentElement; d.dataset.theme=THEME; const m=$('meta[name="theme-color"]'); if(m) m.content=THEME==='dark'?'#171c19':'#ecefed'; }
+function setTheme(){ THEME=THEME==='dark'?'light':'dark'; try{localStorage.setItem('haraj-alula-theme',THEME);}catch(e){} applyTheme(); render(); toast(LANG==='en'?(THEME==='dark'?'Dark mode enabled':'Light mode enabled'):(THEME==='dark'?'تم تفعيل الوضع الداكن':'تم تفعيل الوضع الفاتح')); }
+const modeBtn=c=>`<button class="mode-toggle ${c||''}" data-act="theme" data-noi18n aria-label="${THEME==='dark'?(LANG==='en'?'Switch to light mode':'تفعيل الوضع الفاتح'):(LANG==='en'?'Switch to dark mode':'تفعيل الوضع الداكن')}" title="${THEME==='dark'?(LANG==='en'?'Light mode':'الوضع الفاتح'):(LANG==='en'?'Dark mode':'الوضع الداكن')}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${THEME==='dark'?'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>':'<path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>'}</svg></button>`;
 const langBtn=c=>`<button class="lang ${c||''}" data-act="lang" data-noi18n lang="${LANG==='en'?'ar':'en'}" aria-label="${LANG==='en'?'التحويل إلى العربية':'Switch to English'}">${LANG==='en'?'العربية':'English'}</button>`;
 let tt; function toast(m){const t=$('#toast');m=tr(m);t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),2400);}
 
@@ -2253,7 +2297,7 @@ const catIc=c=>`<svg class="ic cimg" viewBox="0 0 48 48" aria-hidden="true">${CA
 const catBtn=(c,sel)=>`<button class="cat" data-act="${sel===undefined?'cat':'pick-cat'}" data-id="${c.id}" ${sel!==undefined?`aria-pressed="${sel===c.id}"`:''}>${catIc(c)}<span>${c.name}</span></button>`;
 const catGrid=(sel,limit)=>`<div class="cats">${(limit?CATS.slice(0,limit):sel===undefined?BROWSE:CATS).map(c=>catBtn(c,sel)).join('')}${limit?`<button class="cat more" data-act="nav" data-id="cats">${ic('layout-grid')}<span>كل الأقسام</span></button>`:''}</div>`;
 const head=(t,more)=>`<div class="sec-head"><h2>${t}</h2>${more?`<button data-act="all">عرض الكل ${ic('chevron-left')}</button>`:''}</div>`;
-const topbar=(title,noBack,attr)=>`<header class="topbar">${noBack?'':`<button class="round-btn" data-act="back" aria-label="رجوع">${ic('chevron-right')}</button>`}<h1${attr||''}>${title}</h1>${noBack?'':'<span class="ghost"></span>'}</header>`;
+const topbar=(title,noBack,attr)=>`<header class="topbar">${noBack?'<span class="ghost"></span>':`<button class="round-btn" data-act="back" aria-label="رجوع">${ic('chevron-right')}</button>`}<h1${attr||''}>${title}</h1>${modeBtn()}</header>`;
 const logo=`<div class="logo">${MARK}<div><b>حراج العلا</b></div></div>`;
 /* بائع لم تصل بياناته بعد (محوّل غير فوري): عرض محايد بلا توثيق */
 const NO_SELLER={user:false,name:'…',rating:null,reviews:0,joined:'',verified:false,biz:false};
@@ -2286,7 +2330,7 @@ const V={};
 V.splash=()=>{
   const pq=readData('listPublic',[],'public'), L=pq.data||[], latest=L.slice().sort((x,y)=>age(x)-age(y)).slice(0,6);   /* عبر طبقة API */
   return `<section class="splash"><div class="splash-in">
-  <div class="sp-main">${langBtn('on-splash')}${MARK}<h1>حراج العلا</h1><p class="tag">بيع واشترِ من أهل العلا مباشرة</p>
+  <div class="sp-main">${langBtn('on-splash')}${modeBtn('on-splash')}${MARK}<h1>حراج العلا</h1><p class="tag">بيع واشترِ من أهل العلا مباشرة</p>
     <form class="search" data-form="search" role="search">${ic('search')}<input name="q" type="search" placeholder="عمّ تبحث؟ سيارة، شقة، جوال..." aria-label="ابحث في حراج العلا"><button aria-label="بحث">${ic('send')}</button></form>
     <p class="sp-stats"><span><b>${pq.data?L.length:'…'}</b>${adsLabel(L.length)}</span><span><b>${BROWSE.length}</b>قسمًا</span><span><b>${PLACES.length}</b>مناطق</span></p>
     <div class="sp-cta"><button class="btn btn-gold" data-act="start">تصفح الإعلانات</button>
@@ -2331,7 +2375,7 @@ V.home=()=>{
   const rec=by(a=>['cars','electronics'].indexOf(a.cat)>-1).slice(-5);
   const unread=NOTIFS.some(n=>!n.read);
   return `<header class="home-head">
-    <span class="head-tools">${langBtn()}<button class="round-btn bell${unread?' has':''}" data-act="notifs" aria-label="الإشعارات${unread?' (جديدة)':''}">${ic('bell')}</button></span>
+    <span class="head-tools">${modeBtn()}${langBtn()}<button class="round-btn bell${unread?' has':''}" data-act="notifs" aria-label="الإشعارات${unread?' (جديدة)':''}">${ic('bell')}</button></span>
     ${logo}
     <span class="loc-chip">${ic('map-pin')}العلا</span></header>
   <form class="search" data-form="search" role="search">${ic('search')}<input name="q" type="search" placeholder="ابحث في حراج العلا" aria-label="ابحث في حراج العلا"></form>
@@ -2614,6 +2658,7 @@ document.addEventListener('click',e=>{
   const act=el.dataset.act,id=el.dataset.id,w=S.wiz,l=S.login;
   switch(act){
     case 'start': go('home',{root:true}); break;
+    case 'theme': setTheme(); break;
     case 'login': S.after=null; S.login=newLogin(); go('login'); break;
     case 'login-prev': l.step=0;l.err='';l.code=''; render(); break;
     case 'login-method': l.method=id; l.err=''; render(); break;
@@ -2756,6 +2801,7 @@ load();
 try{ history.replaceState({hi:0},''); }catch(e){}
 { const m=/^#ad=(\d+)$/.exec(location.hash||''); if(m&&ad(m[1])){ S.adId=+m[1]; S.stack=['home']; S.screen='detail'; } }
 applyLang();
+applyTheme();
 render();
 </script>
 </body>
